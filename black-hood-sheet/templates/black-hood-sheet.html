@@ -1,0 +1,89 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <!-- Портрет и имя -->
+  <div class="portrait-section">
+    <div class="portrait">
+      <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+    </div>
+    <div class="name">
+      <input name="name" type="text" value="{{actor.name}}" placeholder="Имя персонажа"/>
+    </div>
+  </div>
+
+  <!-- Вкладки -->
+  <nav class="tabs flexrow" data-group="primary">
+    <a class="item" data-tab="main">Основное</a>
+    <a class="item" data-tab="biography">Биография</a>
+    <a class="item" data-tab="notes">Заметки</a>
+  </nav>
+
+  <section class="sheet-body">
+    <!-- Вкладка Основное -->
+    <div class="tab main" data-group="primary" data-tab="main">
+      
+      <!-- Статы -->
+      <div class="stats-section">
+        <h2>Характеристики</h2>
+        <div class="stats-grid">
+          {{#each system.stats as |value stat|}}
+          <div class="stat-block">
+            <div class="stat-label">{{stat}}</div>
+            <div class="stat-value" data-stat="{{stat}}">{{value}}</div>
+            <div class="stat-highlight">
+              <button class="highlight-toggle {{#if (eq (lookup ../system.highlights stat) true)}}active{{/if}}" data-stat="{{stat}}" title="Хайлайт (отметка игрока)">⚔️</button>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+        <p class="hint">Кликните по числу, чтобы бросить 2d6 + стат. Хайлайт — просто отметка.</p>
+      </div>
+
+      <!-- Счётчики -->
+      <div class="counters-section">
+        <div class="counter">
+          <label>Честь</label>
+          <div class="counter-control">
+            <button class="honor-minus">-</button>
+            <span class="counter-value">{{system.honor.value}}</span>
+            <button class="honor-plus">+</button>
+          </div>
+        </div>
+        <div class="counter">
+          <label>HP</label>
+          <div class="counter-control">
+            <button class="hp-minus">-</button>
+            <span class="counter-value">{{system.hp.value}} / {{system.hp.max}}</span>
+            <button class="hp-plus">+</button>
+          </div>
+        </div>
+        <div class="counter">
+          <label>Опыт</label>
+          <div class="counter-control">
+            <button class="xp-minus">-</button>
+            <span class="counter-value">{{system.xp.value}} / {{system.xp.max}}</span>
+            <button class="xp-plus">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Снаряжение -->
+      <div class="gear-section">
+        <h2>Снаряжение</h2>
+        <textarea name="system.gear" rows="5">{{system.gear}}</textarea>
+      </div>
+
+    </div> <!-- закрытие main -->
+
+    <!-- Вкладка Биография -->
+    <div class="tab biography" data-group="primary" data-tab="biography">
+      <h2>Биография</h2>
+      <textarea name="system.biography" rows="20">{{system.biography}}</textarea>
+    </div>
+
+    <!-- Вкладка Заметки -->
+    <div class="tab notes" data-group="primary" data-tab="notes">
+      <h2>Заметки</h2>
+      <textarea name="system.notes" rows="20">{{system.notes}}</textarea>
+    </div>
+
+  </section>
+</form>
