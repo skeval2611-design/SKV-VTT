@@ -1,6 +1,6 @@
 {
   "name": "black-hood-sheet",
-  "title": "! Black Hood Character Sheet (GoT Style)",
+  "title": "! Character Sheet (GoT Style)",
   "description": "Кастомный лист персонажа с стилизацией под Игру престолов",
   "version": "1.0.1",
   "author": "Skeval",
@@ -22,3 +22,4 @@
     ]
   }
 }
+
