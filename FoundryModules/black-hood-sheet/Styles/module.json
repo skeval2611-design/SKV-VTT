@@ -1,0 +1,22 @@
+{
+  "name": "black-hood-sheet",
+  "title": " Character Sheet (GoT Style)",
+  "description": "Кастомный лист персонажа c стилизацией под Игру престолов",
+  "version": "1.0.0",
+  "author": "Skeval",
+  "esmodules": ["scripts/black-hood-sheet.js"],
+  "styles": ["styles/black-hood.css"],
+  "packs": [],
+  "url": "https://your-url.com",
+  "manifest": "https://your-url.com/module.json",
+  "download": "https://your-url.com/black-hood-sheet.zip",
+  "minimumCoreVersion": "10",
+  "compatibleCoreVersion": "11",
+  "relationships": {
+    "systems": [{
+      "id": "simple-worldbuilding",
+      "type": "system",
+      "compatibility": {}
+    }]
+  }
+}
