@@ -3,12 +3,12 @@
   "title": "1 Character Sheet (GoT Style)",
   "description": "Кастомный лист персонажа с стилизацией под Игру престолов",
   "version": "1.0.3",
-  "author": "Skewal",
+  "author": "Skeval",
   "esmodules": ["scripts/black-hood-sheet.js"],
   "styles": ["styles/black-hood.css"],
   "packs": [],
   "url": "https://github.com/skewal2611-design/SKV-VTT",
-  "manifest": "https://raw.githubusercontent.com/skewal2611-design/SKV-VTT/main/FoundryModules/black-hood-sheet/module.json",
+  "manifest": "https://raw.githubusercontent.com/skeval2611-design/SKV-VTT/main/black-hood-sheet/module.json",
   "download": "https://github.com/skewal2611-design/SKV-VTT/archive/refs/heads/main.zip",
   "minimumCoreVersion": "10",
   "compatibleCoreVersion": "11",
@@ -21,4 +21,5 @@
       }
     ]
   }
+
 }
